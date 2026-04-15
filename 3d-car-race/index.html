@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Car Race - Dhanush</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; }
+        #ui { position: absolute; top: 10px; left: 10px; color: white; font-family: sans-serif; font-size: 20px; z-index: 100; }
+    </style>
+</head>
+<body>
+    <div id="ui">Score: 0</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        let scene, camera, renderer, player, road;
+        let score = 0;
+        let enemies = [];
+
+        function init() {
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x333333);
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.set(0, 5, 10);
+            camera.lookAt(0, 0, 0);
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+            const light = new THREE.DirectionalLight(0xffffff, 1);
+            light.position.set(0, 10, 10);
+            scene.add(light);
+            scene.add(new THREE.AmbientLight(0x404040));
+            const roadGeo = new THREE.PlaneGeometry(10, 1000);
+            const roadMat = new THREE.MeshPhongMaterial({ color: 0x222222 });
+            road = new THREE.Mesh(roadGeo, roadMat);
+            road.rotation.x = -Math.PI / 2;
+            scene.add(road);
+            const carGeo = new THREE.BoxGeometry(1, 0.5, 2);
+            const carMat = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+            player = new THREE.Mesh(carGeo, carMat);
+            player.position.y = 0.25;
+            scene.add(player);
+            animate();
+            setInterval(createEnemy, 2000);
+        }
+
+        function createEnemy() {
+            const enemyGeo = new THREE.BoxGeometry(1, 0.5, 2);
+            const enemyMat = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+            const enemy = new THREE.Mesh(enemyGeo, enemyMat);
+            enemy.position.set((Math.random() - 0.5) * 8, 0.25, -50);
+            scene.add(enemy);
+            enemies.push(enemy);
+        }
+
+        window.addEventListener('touchstart', (e) => {
+            if(e.touches[0].clientX < window.innerWidth / 2) {
+                if(player.position.x > -4) player.position.x -= 1;
+            } else {
+                if(player.position.x < 4) player.position.x += 1;
+            }
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            enemies.forEach((enemy, index) => {
+                enemy.position.z += 0.5;
+                if (player.position.distanceTo(enemy.position) < 1.2) {
+                    alert("Game Over! Score: " + score);
+                    location.reload();
+                }
+                if(enemy.position.z > 10) {
+                    scene.remove(enemy);
+                    enemies.splice(index, 1);
+                }
+            });
+            score++;
+            document.getElementById('ui').innerText = "Score: " + score;
+            renderer.render(scene, camera);
+        }
+        init();
+    </script>
+</body>
+</html>
+
