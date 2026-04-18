@@ -128,3 +128,14 @@ header {
   background-color: white;
 }
 
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  header {
+    padding: 20px;
+    font-size: 14px;
+  }
+}
+
