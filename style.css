@@ -83,10 +83,17 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #34495e;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    
 }
-
+.card {
+  flex: 1 1 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
 /* Flex Items */
 .flex-item {
     background-color: #1abc9c;
