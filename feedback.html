@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Feedback Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Dhanush Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Feedback</h2>
-    <form>
-        <label>Share your thoughts:</label><br>
-        <textarea name="feedback" rows="4" cols="30"></textarea><br><br>
-        
-        <label>Rating (1-5):</label>
-        <input type="number" name="rating" min="1" max="5"><br><br>
-        
-        <button type="submit">Submit</button>
-    </form>
+    <header>
+        <h1>Your Feedback</h1>
+    </header>
+
+    <main class="flex-container">
+        <div class="card">
+            <form>
+                <label>Name:</label><br>
+                <input type="text" name="name" placeholder="Your Name" required><br><br>
+                
+                <label>Message:</label><br>
+                <textarea name="message" rows="4" placeholder="Your Feedback" required></textarea><br><br>
+                
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <br>
+            <a href="index.html">Back to Home</a>
+        </div>
+    </main>
 </body>
 </html>
 
