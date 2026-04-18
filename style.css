@@ -11,8 +11,13 @@ body {
 header {
     background-color: #2c3e50;
     color: white;
-    padding: 40px;            /* Inside space */
+    padding:20px;            /* Inside space */
     border: 5px solid #1abc9c; /* Border */
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
     margin-bottom: 20px;     /* Outside space */
     text-align: center;
 }
@@ -106,5 +111,13 @@ header {
     .flex-container {
         flex-direction: column;
     }
+}
+
+.card {
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid #1abc9c;
+  border-radius: 10px;
+  background-color: white;
 }
 
