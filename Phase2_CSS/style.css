@@ -1,0 +1,32 @@
+/* Center the box on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+/* The Box Model Task */
+.box {
+    background-color: #ffffff;
+    width: 300px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    
+    /* CSS Box Model Elements */
+    padding: 40px;           /* Inner space */
+    border: 8px solid #3498db; /* The border */
+    margin: 20px;            /* Outer space */
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
