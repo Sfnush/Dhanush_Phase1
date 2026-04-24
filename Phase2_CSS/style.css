@@ -4,74 +4,25 @@ body {
     padding: 20px;
 }
 
-/* Display Examples */
-.inline-box {
-    display: inline-block;
-    width: 120px;
-    padding: 10px;
-    background-color: #3498db;
+/* Flexbox Properties */
+.flex-container {
+    display: flex;            /* Enables Flexbox */
+    justify-content: center;   /* Horizontal alignment (center, space-between, etc.) */
+    align-items: center;       /* Vertical alignment */
+    gap: 15px;                /* Space between items */
+    background-color: white;
+    padding: 20px;
+    height: 200px;
+    border: 2px solid #ccc;
+}
+
+.flex-item {
+    background-color: #9b59b6;
     color: white;
+    padding: 20px;
+    font-size: 20px;
     text-align: center;
-    margin: 5px;
+    width: 80px;
 }
 
-.block-box {
-    display: block;
-    background-color: #2ecc71;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-/* Positioning Examples */
-.parent {
-    position: relative;
-    width: 300px;
-    height: 150px;
-    background-color: #ffffff;
-    border: 2px solid #333;
-    margin-top: 40px;
-    padding: 10px;
-}
-
-.child {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #e74c3c;
-    color: white;
-    padding: 5px 15px;
-}
-
-
-/* 2. Display: Block (Takes full width) */
-.block-box {
-    display: block;
-    background-color: #2ecc71;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-/* 3. Positioning Example */
-.parent {
-    position: relative;
-    width: 300px;
-    height: 150px;
-    background-color: #ffffff;
-    border: 2px solid #333;
-    margin-top: 50px;
-    padding: 10px;
-}
-
-.child {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #e74c3c;
-    color: white;
-    padding: 5px 15px;
-}
 
