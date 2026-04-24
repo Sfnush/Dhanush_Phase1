@@ -1,32 +1,77 @@
-/* Center the box on the page */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f2f5;
-}
-
-/* The Box Model Task */
-.box {
-    background-color: #ffffff;
-    width: 300px;
-    text-align: center;
     font-family: Arial, sans-serif;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    
-    /* CSS Box Model Elements */
-    padding: 40px;           /* Inner space */
-    border: 8px solid #3498db; /* The border */
-    margin: 20px;            /* Outer space */
+    background-color: #f0f0f0;
+    padding: 20px;
 }
 
-h2 {
-    color: #333;
+/* Display Examples */
+.inline-box {
+    display: inline-block;
+    width: 120px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    margin: 5px;
 }
 
-p {
-    color: #666;
+.block-box {
+    display: block;
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Positioning Examples */
+.parent {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+}
+
+
+/* 2. Display: Block (Takes full width) */
+.block-box {
+    display: block;
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 3. Positioning Example */
+.parent {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 15px;
 }
 
