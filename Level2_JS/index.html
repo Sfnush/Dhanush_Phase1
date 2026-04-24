@@ -1,13 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>JS Level 2 - Dhanush</title>
+    <title>JS DOM Task</title>
 </head>
 <body>
-    <h1>JavaScript Task 1: Variables</h1>
-    <p>Open Console to see output</p>
-    <script src="script.js"></script>
+    <h1 id="main-title">Hello Dhanush!</h1>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+
+    <button id="content-btn">Click to Change Content</button>
+    
+    <button id="style-btn">Change Background Color</button>
+<br><br>
+<input type="text" id="user-input" placeholder"Type something here...">
+<p>Live Preview: <span id="preview-text"></span></p>
+<hr>
+<form id="login-form">
+<input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password (min 6 chars)" required><br>
+    <button type="submit">Login</button>
+</form>
+
+<p id="error-message" style="color: red;"></p>
+<br><hr>
+<h3>Toggle Box Task</h3>
+<button id="toggle-btn">Show/Hide Box</button>
+<div id="toggle-box" style="width: 100px; height: 100px; background-color: orange; margin-top: 10px;">
+    I am a Box!
+</div>
+<hr>
+<h3>To-Do List</h3>
+<input type="text" id="todo-input" placeholder="Enter a task...">
+<button id="add-btn">Add Task</button>
+<ul id="todo-list"></ul>
+
+<script src="script.js"></script>
 </body>
 </html>
+ 
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS DOM Task</title>
+</head>
+<body>
+    <h1 id="main-title">Hello Dhanush!</h1>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+
+    <button onclick="changeContent()">Click to Change Content</button>
+    
+    <button id="style-btn">Change Background Color</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
